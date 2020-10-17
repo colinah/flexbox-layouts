@@ -76,13 +76,13 @@ function resize(elementId, buttonId) {
     }
     if(document.getElementById('mosaic').checked){
         html += "<div class='parent parent-mosaic'>";
-        html += "<div class='child child-mosaic small'>HERE</div>";
-        html += "<div class='child child-mosaic medium'>HERE</div>";
-        html += "<div class='child child-mosaic large'>HERE</div>";
-        html += "<div class='child child-mosaic medium'>HERE</div>";
-        html += "<div class='child child-mosaic medium'>HERE</div>";
-        html += "<div class='child child-mosaic small'>HERE</div>";
-        html += "<div class='child child-mosaic small'>HERE</div>";
+        html += "<div class='child child-mosaic large'>parent { display: flex; flex-flow: column wrap; }</div>";
+        html += "<div class='child child-mosaic medium'>child { flex 0 1 auto;</div>";
+        html += "<div class='child child-mosaic large'>child:nth-child(3n+1) { order: 1; }</div>";
+        html += "<div class='child child-mosaic medium'>child:nth-child(3n+2) { order: 1; }</div>";
+        html += "<div class='child child-mosaic medium'>child:nth-child(3n) { order: 1; }</div>";
+        html += "<div class='child child-mosaic large'>nth-child orders children in a way that you would expect them to be displayed</div>";
+        html += "<div class='child child-mosaic small'></div>";
         html += "</div><div id='button'>Resize</div>";
         document.getElementById('scalable-div').innerHTML = html;
     }
