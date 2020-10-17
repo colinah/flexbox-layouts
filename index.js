@@ -86,6 +86,30 @@ function resize(elementId, buttonId) {
         html += "</div><div id='button'>Resize</div>";
         document.getElementById('scalable-div').innerHTML = html;
     }
+    if(document.getElementById('bar-graph-horizontal').checked){
+        html += "<div class='parent parent-bar-graph-horizontal'>";
+        html += "<div class='child'>parent { display: flex; flex-direction: column; }</div>";
+        html += "<div class='child'>child { height: 20px; width: calc(%width - padding); }</div>";
+        html += "<div class='child child-bar-graph-horizontal'>50%</div>";
+        html += "<div class='child child-bar-graph-horizontal child-bar-graph-30'>30%</div>";
+        html += "<div class='child child-bar-graph-horizontal child-bar-graph-80'>80%</div>";
+        html += "<div class='child child-bar-graph-horizontal child-bar-graph-100'>100%</div>";
+        html += "<div class='child child-bar-graph-horizontal child-bar-graph-40'>40%</div>";
+        html += "</div><div id='button'>Resize</div>";
+        document.getElementById('scalable-div').innerHTML = html;
+      }
+      if(document.getElementById('bar-graph-vertical').checked){
+        html += "<div class='parent parent-bar-graph-vertical'>";
+        html += "<div class='child'>parent { display: flex; flex-direction: column; }</div>";
+        html += "<div class='child'>child { height: 20px; width: calc(%width - padding); }</div>";
+        html += "<div class='child child-bar-graph-vertical'>50%</div>";
+        html += "<div class='child child-bar-graph-vertical child-bar-graph-30'>30%</div>";
+        html += "<div class='child child-bar-graph-vertical child-bar-graph-80'>80%</div>";
+        html += "<div class='child child-bar-graph-vertical child-bar-graph-100'>100%</div>";
+        html += "<div class='child child-bar-graph-vertical child-bar-graph-40'>40%</div>";
+        html += "</div><div id='button'>Resize</div>";
+        document.getElementById('scalable-div').innerHTML = html;
+      }
     // if(document.getElementById('responsive-grid').checked){
     //     html += "<div class='parent parent-'>";
     //     html += "<div class='child child-'></div>";

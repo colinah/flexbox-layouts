@@ -70,14 +70,35 @@ flex: 0 1 100px;
 
 .child-mosaic {
     flex: 0 1 auto;
-    width: 30%;
 }
 
-.child:nth-child(3n+1) { order: 1; }
-.child:nth-child(3n+2) { order: 2; }
-.child:nth-child(3n)   { order: 3; }
+.child-mosaic:nth-child(3n+1) { order: 1; }
+.child-mosaic:nth-child(3n+2) { order: 2; }
+.child-mosaic:nth-child(3n)   { order: 3; }
 
+.parent-bar-graph-horizontal {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
 
+.child-bar-graph-horizontal {
+    height: 20px;
+    width: calc(50% - 20px) ;
+}
+
+.child-bar-graph-30 {
+    width: calc(30% - 20px);
+}
+.child-bar-graph-80 {
+    width: calc(80% - 20px);
+}
+.child-bar-graph-100 {
+    width: calc(100% - 20px);
+}
+.child-bar-graph-40 {
+    width: calc(40% - 20px);
+}
 
 .small {
     width: 100px;
