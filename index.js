@@ -39,6 +39,15 @@ function resize(elementId, buttonId) {
          });
         }
      }
+     if(document.getElementById('horizontal-stack').checked){
+      html += "<div class='parent parent-three-column-stack-all'>";
+      html += "<div class='child child-three-column-stack-all'>parent { display: flex; flex-wrap: wrap;}</div>";
+      html += "<div class='child child-three-column-stack-all'>child { flex: 1 1 100%; }</div>";
+      html += "<div class='child child-three-column-stack-all'></div>";
+      html += "</div>";
+      html +="<div id='button'>Resize</div>";
+      document.getElementById('scalable-div').innerHTML = html;
+     }
       if(document.getElementById('responsive-grid').checked){
       html += "<div class='parent parent-responsive-grid'>";
       html += "<div class='child child-responsive-grid'>parent { display: flex; flex-wrap: wrap; }</div>";
@@ -50,6 +59,34 @@ function resize(elementId, buttonId) {
       html += "<div class='child child-responsive-grid'>Content</div>";
       html += "<div class='child child-responsive-grid'>Content</div>";
       html += "<div class='child child-responsive-grid'>Content</div>";
+      html += "</div><div id='button'>Resize</div>";
+      document.getElementById('scalable-div').innerHTML = html;
+    }
+    if(document.getElementById('responsive-grid-v').checked){
+      html += "<div class='parent parent-responsive-grid-v'>";
+      html += "<div class='child child-responsive-grid-v'>parent { display: flex; flex-wrap: wrap; }</div>";
+      html += "<div class='child child-responsive-grid-v'>child { flex: 0 1 100px; }</div>";
+      html += "<div class='child child-responsive-grid-v'>Content</div>";
+      html += "<div class='child child-responsive-grid-v'>Content</div>";
+      html += "<div class='child child-responsive-grid-v'>Content</div>";
+      html += "<div class='child child-responsive-grid-v'>Content</div>";
+      html += "<div class='child child-responsive-grid-v'>Content</div>";
+      html += "<div class='child child-responsive-grid-v'>Content</div>";
+      html += "<div class='child child-responsive-grid-v'>Content</div>";
+      html += "</div><div id='button'>Resize</div>";
+      document.getElementById('scalable-div').innerHTML = html;
+    }
+    if(document.getElementById('responsive-grid-h').checked){
+      html += "<div class='parent parent-responsive-grid-h'>";
+      html += "<div class='child child-responsive-grid-h'>parent { display: flex; flex-wrap: wrap; }</div>";
+      html += "<div class='child child-responsive-grid-h'>child { height: 100px; flex: 1 1 100px; }</div>";
+      html += "<div class='child child-responsive-grid-h'>The flex-basis acts as a minimum width</div>";
+      html += "<div class='child child-responsive-grid-h'>Content</div>";
+      html += "<div class='child child-responsive-grid-h'>Content</div>";
+      html += "<div class='child child-responsive-grid-h'>Content</div>";
+      html += "<div class='child child-responsive-grid-h'>Content</div>";
+      html += "<div class='child child-responsive-grid-h'>Content</div>";
+      html += "<div class='child child-responsive-grid-h'>Content</div>";
       html += "</div><div id='button'>Resize</div>";
       document.getElementById('scalable-div').innerHTML = html;
     }
@@ -88,13 +125,13 @@ function resize(elementId, buttonId) {
     }
     if(document.getElementById('bar-graph-horizontal').checked){
         html += "<div class='parent parent-bar-graph-horizontal'>";
-        html += "<div class='child'>parent { display: flex; flex-direction: column; }</div>";
-        html += "<div class='child'>child { height: 20px; width: calc(%width - padding); }</div>";
         html += "<div class='child child-bar-graph-horizontal'>50%</div>";
         html += "<div class='child child-bar-graph-horizontal child-bar-graph-30'>30%</div>";
         html += "<div class='child child-bar-graph-horizontal child-bar-graph-80'>80%</div>";
         html += "<div class='child child-bar-graph-horizontal child-bar-graph-100'>100%</div>";
         html += "<div class='child child-bar-graph-horizontal child-bar-graph-40'>40%</div>";
+        html += "<div class='child'>parent { display: flex; flex-direction: column; }</div>";
+        html += "<div class='child'>child { height: 20px; width: calc(%width - padding); }</div>";
         html += "</div><div id='button'>Resize</div>";
         document.getElementById('scalable-div').innerHTML = html;
       }
@@ -103,10 +140,10 @@ function resize(elementId, buttonId) {
         html += "<div class='child'>parent { display: flex; flex-direction: column; }</div>";
         html += "<div class='child'>child { height: 20px; width: calc(%width - padding); }</div>";
         html += "<div class='child child-bar-graph-vertical'>50%</div>";
-        html += "<div class='child child-bar-graph-vertical child-bar-graph-30'>30%</div>";
-        html += "<div class='child child-bar-graph-vertical child-bar-graph-80'>80%</div>";
-        html += "<div class='child child-bar-graph-vertical child-bar-graph-100'>100%</div>";
-        html += "<div class='child child-bar-graph-vertical child-bar-graph-40'>40%</div>";
+        html += "<div class='child child-bar-graph-vertical child-bar-graph-30-v'>30%</div>";
+        html += "<div class='child child-bar-graph-vertical child-bar-graph-80-v'>80%</div>";
+        html += "<div class='child child-bar-graph-vertical child-bar-graph-100-v'>100%</div>";
+        html += "<div class='child child-bar-graph-vertical child-bar-graph-40-v'>40%</div>";
         html += "</div><div id='button'>Resize</div>";
         document.getElementById('scalable-div').innerHTML = html;
       }

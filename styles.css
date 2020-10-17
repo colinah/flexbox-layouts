@@ -24,13 +24,32 @@ flex: 1 1 100%;
 }
 
 .parent-responsive-grid {
-display: flex;
-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .child-responsive-grid {
-height: 100px;
-flex: 0 1 100px;
+    height: 100px;
+    flex: 0 1 100px;
+}
+
+.parent-responsive-grid-v {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.child-responsive-grid-v {
+    flex: 0 1 100px;
+}
+
+.parent-responsive-grid-h {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.child-responsive-grid-h {
+    height: 100px;
+    flex: 1 1 100px;
 }
 
 .align-card-container {
@@ -78,7 +97,6 @@ flex: 0 1 100px;
 
 .parent-bar-graph-horizontal {
     display: flex;
-    box-sizing: border-box;
     flex-direction: column;
 }
 
@@ -98,6 +116,30 @@ flex: 0 1 100px;
 }
 .child-bar-graph-40 {
     width: calc(40% - 20px);
+}
+
+.parent-bar-graph-vertical {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+}
+
+.child-bar-graph-vertical {
+    height: calc(50% - 20px);
+    width: 20px;
+}
+
+.child-bar-graph-30-v {
+    height: calc(30% - 20px);
+}
+.child-bar-graph-80-v {
+    height: calc(80% - 20px);
+}
+.child-bar-graph-100-v {
+    height: calc(100% - 20px);
+}
+.child-bar-graph-40-v {
+    height: calc(40% - 20px);
 }
 
 .small {
