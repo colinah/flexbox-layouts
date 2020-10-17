@@ -1,0 +1,148 @@
+.parent-three-column {
+    display: flex;
+}
+.child-three-column {
+flex: 1 1 1px;
+margin: 10px;
+}
+
+.parent-three-column-stack {
+display: flex;
+flex-wrap: wrap;
+}
+.child-three-column-stack {
+flex: 1 1 1px;
+min-width: 100px;
+}
+
+.parent-three-column-stack-all {
+display: flex;
+flex-wrap: wrap;
+}
+.child-three-column-stack-all {
+flex: 1 1 100%;
+}
+
+.parent-responsive-grid {
+display: flex;
+flex-wrap: wrap;
+}
+
+.child-responsive-grid {
+height: 100px;
+flex: 0 1 100px;
+}
+
+.align-card-container {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.parent-align-card{
+    height: 200px;
+    flex: 0 1 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.align-card-image {
+    width: calc(100% - 10px);
+    height: 80px;
+    background-color: #00909e;
+    margin: 5px;
+}
+
+.align-card-title {
+    color: rgb(49, 49, 49);
+    padding: 5px;
+}
+
+.align-card-excerpt {
+    color: rgb(95, 95, 95);
+    padding: 5px;
+}
+
+.parent-mosaic {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    justify-content: center;
+}
+
+.parent-mosaic::before,
+.parent-mosaic::after {
+  order: 2;
+}
+
+.child-mosaic {
+    flex: 0 1 auto;
+}
+
+.child:nth-child(3n+1) { order: 1; }
+.child:nth-child(3n+2) { order: 2; }
+.child:nth-child(3n)   { order: 3; }
+
+.parent {
+width: 100%;
+height: 100%;
+}
+
+.small {
+    width: 100px;
+    height: 50px;
+}
+
+.medium {
+    width: 100px;
+    height: 75px;
+}
+
+.large {
+    width: 100px;
+    height: 120px;
+}
+
+.child {
+    margin: 10px;
+    background-color: #a6c8eb;
+}
+/*  Below is just styling not the layouts */
+.buttons {
+margin: 0;
+display: inline-flex;
+flex-wrap: wrap;
+list-style-type: none;
+}
+li {
+padding: 10px;
+}
+
+body {
+width: 100%;
+background-color: #a1a1a1;
+}
+#scalable-div {
+background: #414141;
+width: 200px;
+height: 200px;
+position: relative; /* bottom-right-corner */
+top: 10px;
+left: 10px;
+max-width: calc(100% - 20px);
+max-height: calc(100% - 20px);
+}
+
+#button{
+position: absolute; /* bottom-right-corner */
+bottom: 0; /* bottom-right-corner */
+right: 0; /* bottom-right-corner */
+cursor: nwse-resize;
+letter-spacing: 0.05em;
+color: #f1f1f1;
+padding: 1px 3px 1px 1px;
+}
+
+#button:hover {
+color: #00909e;
+}
